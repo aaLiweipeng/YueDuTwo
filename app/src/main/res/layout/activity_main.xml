@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#eeeeee"
+        tools:context=".MainActivity">
+
+        <ImageView
+            android:alpha="0.85"
+            android:background="@drawable/bcp7"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:alpha="0.85"
+                android:layout_margin="18dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/main_et_text"
+                    android:alpha="0.85"
+                    android:background="#4D03A9F4"
+                    android:textColor="@android:color/white"
+                    android:layout_margin="18sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="280dp"
+                    android:layout_marginTop="20dp"
+                    android:hint="用于显示语音识别后的文字" />
+
+                <Button
+                    android:id="@+id/main_btn_startSpeak"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="150dp"
+                    android:layout_below="@+id/main_et_text"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/btn_press_state"
+                    android:text="点击说话"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/main_btn_changeYueDu"
+                    android:layout_below="@+id/main_et_text"
+                    android:layout_toRightOf="@+id/main_btn_startSpeak"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/btn_press_state"
+                    android:text="转到悦读框"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/main_btn_poemFirst"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="150dp"
+                    android:layout_below="@+id/main_btn_startSpeak"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/btn_press_state"
+                    android:text="李         白"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/main_btn_poemSecond"
+                    android:layout_below="@+id/main_btn_changeYueDu"
+                    android:layout_toRightOf="@+id/main_btn_startSpeak"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/btn_press_state"
+                    android:text="杜         甫"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/main_btn_poemThird"
+                    android:layout_below="@+id/main_btn_poemSecond"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/btn_press_state"
+                    android:text="王         维"
+                    android:textColor="@android:color/white" />
+
+                <EditText
+                    android:alpha="0.85"
+                    android:background="#4D03A9F4"
+                    android:layout_below="@+id/main_btn_poemThird"
+                    android:textColor="@android:color/white"
+                    android:layout_margin="18dp"
+                    android:id="@+id/main_et_needToHeCheng"
+                    android:layout_width="match_parent"
+                    android:layout_height="280dp"
+                    android:layout_marginTop="20dp"
+                    android:hint="在此输入需要语音合成的文本" />
+
+                <Button
+                    android:id="@+id/main_btn_startHeCheng"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/main_et_needToHeCheng"
+                    android:background="@drawable/btn_press_state"
+                    android:text="开始语音合成"
+                    android:textColor="@android:color/white" />
+
+                <View
+                    android:layout_below="@+id/main_btn_startHeCheng"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"/>
+            </RelativeLayout>
+        </ScrollView>
+    </FrameLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@drawable/bcp4"
+        app:itemTextColor="@android:color/white"
+        android:alpha="0.8"
+        app:menu="@menu/nav_menu"
+        app:headerLayout="@layout/nav_header">
+
+    </android.support.design.widget.NavigationView>
+
+</android.support.v4.widget.DrawerLayout>
+
+
+

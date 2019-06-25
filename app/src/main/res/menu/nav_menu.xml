@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_tangshi"
+            android:icon="@mipmap/tangshi"
+            android:title="唐诗"/>
+        <item
+            android:id="@+id/nav_songci"
+            android:icon="@mipmap/songci"
+            android:title="宋词"/>
+        <item
+            android:id="@+id/nav_yuanqv"
+            android:icon="@mipmap/yuanqv"
+            android:title="元曲"/>
+        <item
+            android:id="@+id/nav_englishpoem"
+            android:icon="@mipmap/englishpoem"
+            android:title="英文诗歌"/>
+    </group>
+
+</menu>
